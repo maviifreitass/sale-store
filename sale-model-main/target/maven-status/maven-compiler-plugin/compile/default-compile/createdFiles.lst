@@ -1,8 +1,14 @@
+com\sale\model\entity\OrderProductId.class
+com\sale\model\service\DemoApplication.class
+com\sale\model\entity\OrderProduct.class
+com\sale\model\repository\util\PostgresWrapper.class
+com\sale\model\entity\Client.class
 com\sale\model\repository\OrderDB.class
 com\sale\model\repository\ProductDB.class
 com\sale\model\resources\ProductREST.class
 com\sale\model\resources\OrderREST.class
-com\sale\model\service\DemoApplication.class
 com\sale\model\entity\Payment.class
+com\sale\model\entity\dao\ProductOrderDAO.class
 com\sale\model\entity\Order.class
+com\sale\model\repository\util\EntityManagerProducer.class
 com\sale\model\entity\Product.class

@@ -17,6 +17,25 @@
     </properties>
     
     <dependencies>
+        <!-- Dependências para conexão com o banco -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.2.3.Final</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>4.2.3.Final</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.16</version>
+        </dependency>
+        <!-- -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -128,11 +147,11 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                 <configuration>
+                <configuration>
                     <excludes>
-                      <exclude>com/sale/model/service/*</exclude>
-                      <exclude>com/sale/model/resources/*</exclude>
-                      <exclude>com/sale/model/repository/*</exclude>
+                        <exclude>com/sale/model/service/*</exclude>
+                        <exclude>com/sale/model/resources/*</exclude>
+                        <exclude>com/sale/model/repository/*</exclude>
                     </excludes>    
                 </configuration>
                 <version>0.8.8</version>

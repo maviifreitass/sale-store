@@ -10,11 +10,6 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Context;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.DELETE;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
-import jakarta.ws.rs.PathParam;
 import java.util.List;
 
 @Path("/product")
@@ -22,7 +17,7 @@ public class ProductREST {
 
     @Inject
     private ProductDB productDB;
-
+/*
     @PUT
     @Path("/edit/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -102,13 +97,13 @@ public class ProductREST {
         }
 
         return Response.noContent().build();
-    }
+    }*/
 
     @GET
     @Path("")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getList(@Context HttpServletRequest request) {
-        List<Product> productList = productDB.getInstance().getProductList();
+        List<Product> productList = productDB.findAll();
         return Response.ok(productList).build();
     }
 

@@ -1,8 +1,14 @@
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\repository\ProductDB.java
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\repository\OrderDB.java
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\entity\Payment.java
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\resources\OrderREST.java
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\resources\ProductREST.java
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\service\DemoApplication.java
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\entity\Order.java
-C:\Users\maria\Documents\NetBeansProjects\SaleModelJUnit\src\main\java\com\sale\model\entity\Product.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\Order.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\repository\util\EntityManagerProducer.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\repository\util\PostgresWrapper.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\resources\ProductREST.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\OrderProductId.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\Client.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\OrderProduct.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\service\DemoApplication.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\resources\OrderREST.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\repository\OrderDB.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\repository\ProductDB.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\Payment.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\Product.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\dao\ProductOrderDAO.java

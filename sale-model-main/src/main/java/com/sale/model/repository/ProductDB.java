@@ -5,8 +5,12 @@
 package com.sale.model.repository;
 
 import com.sale.model.entity.Product;
+import jakarta.inject.Inject;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,30 +19,20 @@ import java.util.List;
  */
 public class ProductDB implements Serializable {
 
-    private static ProductDB instance;
-    private List<Product> productList;
+    @Inject
+    private EntityManager em;
 
-    private ProductDB() {
-        productList = new ArrayList<>();
-        Product p1 = new Product(1L, "Produto 1", 7.90);
-        Product p2 = new Product(2L, "Produto 2", 9.90);
-        productList.add(p1);
-        productList.add(p2);
+    public Product findById(Long id) {
+        return em.find(Product.class, id);
     }
 
-    public static ProductDB getInstance() {
-        if (instance == null) {
-            instance = new ProductDB();
-        }
-        return instance;
-    }
+    public List<Product> findAll() {
+        CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+        CriteriaQuery<Product> criteriaQuery = criteriaBuilder.createQuery(Product.class);
+        Root<Product> root = criteriaQuery.from(Product.class);
+        criteriaQuery.select(root);
 
-    public List<Product> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+        return em.createQuery(criteriaQuery).getResultList();
     }
 
 }

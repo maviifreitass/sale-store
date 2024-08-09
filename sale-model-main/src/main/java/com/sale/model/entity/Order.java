@@ -4,34 +4,44 @@
  */
 package com.sale.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  *
  * @author maria
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Order {
+@Entity
+@Table(name = "Pedido")
+public class Order implements Serializable {
 
-    @JsonProperty("id")
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonProperty("total")
-    private String total;
+    @Column(name = "data")
+    @Temporal(TemporalType.DATE)
+    private Date orderTime;
 
-    @JsonProperty("products")
-    private List<Product> products;
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Client client;
 
-    @JsonProperty("payment")
-    private Payment payment;
+    @Column(name = "status")
+    private String status;
 
-    @JsonProperty("quota")
-    private Integer quota;
-
-    @JsonProperty("quotaValue")
+    @Column(name = "valor_total")
     private double quotaValue;
 
     public Long getId() {
@@ -42,43 +52,28 @@ public class Order {
         this.id = id;
     }
 
-    public String getTotal() {
-        return total;
+    public Date getOrderTime() {
+        return orderTime;
     }
 
-    public void setTotal(String total) {
-        this.total = total;
-    }
-    
-    public List<Product> getProducts() {
-        return products;
+    public void setOrderTime(Date orderTime) {
+        this.orderTime = orderTime;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-    // Método para adicionar um produto
-    public void addProduct(Product product) {
-        if (products == null) {
-            products = new ArrayList<>();
-        }
-        products.add(product);
+    public Client getClient() {
+        return client;
     }
 
-    public Payment getPayment() {
-        return payment;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
-    public void setPayment(Payment payment) {
-        this.payment = payment;
+    public String getStatus() {
+        return status;
     }
 
-    public Integer getQuota() {
-        return quota;
-    }
-
-    public void setQuota(Integer quota) {
-        this.quota = quota;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public double getQuotaValue() {

@@ -4,36 +4,45 @@
  */
 package com.sale.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import java.io.Serializable;
 
 /**
  *
  * @author maria
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Product {
+@Entity
+@Table(name = "Produto")
+public class Product implements Serializable {
 
-    @JsonProperty("id")
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonProperty("name")
+    @Column(name = "nome")
     private String name;
 
-    @JsonProperty("value")
-    private Double value;
+    @Column(name = "marca")
+    private String mark;
 
+    @Column(name = "categoria")
+    private String category;
 
-    public Product(Long id, String name, Double value) {
-        this.id = id;
-        this.name = name;
-        this.value = value;
+    @Column(name = "preco")
+    private Double price;
 
-    }
-    
-    public Product(){
-        
-    }
+    @Column(name = "estoque")
+    private Integer stock;
 
     public Long getId() {
         return id;
@@ -51,18 +60,36 @@ public class Product {
         this.name = name;
     }
 
-    public Double getValue() {
-        return value;
+    public String getMark() {
+        return mark;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
+    public void setMark(String mark) {
+        this.mark = mark;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" + "id=" + id + ", name=" + name + ", value=" + value + '}';
+    public String getCategory() {
+        return category;
     }
 
-    
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
 }
