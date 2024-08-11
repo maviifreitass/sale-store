@@ -53,7 +53,6 @@
 					{src: 'js/simpleStore.min.js', dest: 'release/js/simpleStore.min.js'},
 					{src: 'js/simpleCart.min.js', dest: 'release/js/simpleCart.min.js'},
 					{src: 'js/config.js', dest: 'release/js/config.js'},
-					{src: 'products.json', dest: 'release/products.json'},
 					{src: 'images/favicon.png', dest: 'release/images/favicon.png'}
 				]
 			},

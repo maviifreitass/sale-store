@@ -79,7 +79,8 @@ $(function() {
 		numColumns : 3,
 
 		// name of JSON file, located in directory root
-		JSONFile : "products.json"
+		mode: "API",
+        JSONFile: "http://localhost:8080/sale/api/product",
 
 	});
 

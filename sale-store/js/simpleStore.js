@@ -15,8 +15,8 @@ var simpleStore = {
     settings: {
         numColumns: 3,
         brand: "SimpleStore",
-        mode: "JSON",
-        JSONFile: "products.json",
+        mode: "API",
+        JSONFile: "http://localhost:8080/sale/api/product",
         fadeSpeed: 200,
         buttonColor: null,
         backgroundColor: null,
