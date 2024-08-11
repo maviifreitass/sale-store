@@ -1,6 +1,9 @@
 package com.sale.model.resources;
 
 import com.sale.model.entity.Product;
+import com.sale.model.entity.dao.Option;
+import com.sale.model.entity.dao.ProductDAO;
+import com.sale.model.entity.dao.ProductList;
 import com.sale.model.repository.ProductDB;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -10,14 +13,20 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Context;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.ws.rs.core.Response.ResponseBuilder;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import java.util.List;
+import java.util.Map;
 
 @Path("/product")
 public class ProductREST {
 
     @Inject
     private ProductDB productDB;
-/*
+
+    /*
     @PUT
     @Path("/edit/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -98,13 +107,42 @@ public class ProductREST {
 
         return Response.noContent().build();
     }*/
-
     @GET
     @Path("")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getList(@Context HttpServletRequest request) {
         List<Product> productList = productDB.findAll();
-        return Response.ok(productList).build();
+        List<ProductDAO> listResponse = new ArrayList();
+
+        for (Product p : productList) {
+            ProductDAO product = new ProductDAO();
+            product.setName(p.getName());
+            product.setImage(p.getImage());
+            product.setDescription(p.getDescription());
+            product.setPrice(p.getPrice().toString());
+
+            List<Option> listOptions = new ArrayList<>();
+            Option o = new Option();
+
+            if (p.getSize() != null) {
+                o.setSize(p.getSize());
+            }
+            
+            if (p.getColor() != null) {
+                o.setColor(p.getColor());
+            }
+
+            listOptions.add(o);
+            product.setOptions(listOptions);
+            listResponse.add(product);
+        }
+
+        ProductList pdList = new ProductList();
+        pdList.setProducts(listResponse);
+
+        ResponseBuilder response = Response.ok(pdList); 
+        response.header("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+        return response.build();
     }
 
 }

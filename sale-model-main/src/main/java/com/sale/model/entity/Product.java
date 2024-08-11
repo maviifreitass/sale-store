@@ -40,6 +40,18 @@ public class Product implements Serializable {
     @Column(name = "estoque")
     private Integer stock;
 
+    @Column(name = "descricao")
+    private String description;
+
+    @Column(name = "imagem")
+    private String image;
+
+    @Column(name = "cor")
+    private String color;
+
+    @Column(name = "tamanho")
+    private String size;
+
     public Long getId() {
         return id;
     }
@@ -86,6 +98,38 @@ public class Product implements Serializable {
 
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
 }

@@ -1,5 +1,7 @@
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\Order.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\dao\ProductDAO.java
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\repository\util\EntityManagerProducer.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\dao\Option.java
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\repository\util\PostgresWrapper.java
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\resources\ProductREST.java
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\OrderProductId.java
@@ -11,4 +13,5 @@ C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simples
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\repository\ProductDB.java
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\Payment.java
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\Product.java
+C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\dao\ProductList.java
 C:\Users\maria\Documents\IFSC\Trabalho Banco de Dados\simplestore-master\simplestore-master\sale-model-main\src\main\java\com\sale\model\entity\dao\ProductOrderDAO.java
